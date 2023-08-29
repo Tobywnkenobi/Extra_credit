@@ -17,9 +17,13 @@ monster_health = 1200
 
 attack_value = int(input("Enter an attack value: "))
 new_monster_health = int(monster_health) - int(attack_value)
+
 while int(new_monster_health) > 0:
-    print("The beast still lives! ")
+    print("The beast still lives! there are " + str((new_monster_health)) + " hit points left")
+    monster_health = new_monster_health
+    attack_value = int(input("Attack again!: please enter your attack value!:"))
+    new_monster_health = monster_health - attack_value
     
-else: 
+else:
     int(new_monster_health) < 0
     print("The beast is no more!!!")
